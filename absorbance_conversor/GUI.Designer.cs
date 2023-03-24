@@ -20,6 +20,7 @@
             base.Dispose(disposing);
         }
 
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -51,6 +52,7 @@
             this.firstValueInput.Size = new System.Drawing.Size(202, 31);
             this.firstValueInput.TabIndex = 0;
             this.firstValueInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.firstValueInput.KeyPress += this.TextBox_KeyPress;
             // 
             // firstValueLabel
             // 
@@ -60,6 +62,7 @@
             this.firstValueLabel.Size = new System.Drawing.Size(125, 25);
             this.firstValueLabel.TabIndex = 1;
             this.firstValueLabel.Text = "firstValueLabel";
+
             // 
             // secondValueInput
             // 
@@ -68,6 +71,8 @@
             this.secondValueInput.Size = new System.Drawing.Size(202, 31);
             this.secondValueInput.TabIndex = 2;
             this.secondValueInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.secondValueInput.KeyPress += this.TextBox_KeyPress;
+
             // 
             // secondValueLabel
             // 
@@ -94,6 +99,9 @@
             this.thirdValueInput.Size = new System.Drawing.Size(202, 31);
             this.thirdValueInput.TabIndex = 5;
             this.thirdValueInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.thirdValueInput.KeyPress += this.TextBox_KeyPress;
+
+
             // 
             // modeSelector
             // 
@@ -131,7 +139,7 @@
             this.xtechLogoPicture.Size = new System.Drawing.Size(150, 102);
             this.xtechLogoPicture.TabIndex = 9;
             this.xtechLogoPicture.TabStop = false;
-            this.xtechLogoPicture.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.xtechLogoPicture.Click += new System.EventHandler(this.xtechLogoPicture_Click);
             // 
             // resultField
             // 

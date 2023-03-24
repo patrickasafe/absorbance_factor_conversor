@@ -9,6 +9,7 @@
         private string _secondValueLabel = string.Empty;
         private float _thirdValue = 0;
         private string _thirdValueLabel = string.Empty;
+
         public Dictionary<string, string> GetLabels()
         {
             var labels = new Dictionary<string, string>

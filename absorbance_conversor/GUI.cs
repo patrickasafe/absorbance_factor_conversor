@@ -13,13 +13,22 @@ namespace absorbance_factor_conversor
 
         private void CalculateButton_Click(object sender, EventArgs e)
         {
-            var firstValue = float.Parse(this.firstValueInput.Text);
-            var secondValue = float.Parse(this.secondValueInput.Text);
-            var thirdValue = float.Parse(this.thirdValueInput.Text);
+            if (string.IsNullOrEmpty(firstValueInput.Text) || string.IsNullOrEmpty(secondValueInput.Text) ||
+                string.IsNullOrEmpty(thirdValueInput.Text))
+            {
+                // Display an error message box
+                MessageBox.Show("Por favor, preencha os campos com os valores.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                var firstValue = float.Parse(firstValueInput.Text);
+                var secondValue = float.Parse(secondValueInput.Text);
+                var thirdValue = float.Parse(thirdValueInput.Text);
 
-            var result = Calculator.getResult(firstValue, secondValue, thirdValue);
+                var result = Calculator.getResult(firstValue, secondValue, thirdValue);
 
-            this.resultField.Text = result.ToString(CultureInfo.InvariantCulture);
+                resultField.Text = result.ToString(CultureInfo.InvariantCulture);
+            }
         }
 
         private void ModeSelector_SelectedIndexChanged(object sender, EventArgs e)
@@ -47,16 +56,25 @@ namespace absorbance_factor_conversor
             modeSelector.SelectedIndex = 0;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-        }
-
         private void UpdateLabels()
         {
             var labels = Calculator.GetLabels();
             firstValueLabel.Text = labels["firstValue"];
             secondValueLabel.Text = labels["secondValue"];
             thirdValueLabel.Text = labels["thirdValue"];
+        }
+
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Check if the pressed key is a digit
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void xtechLogoPicture_Click(object sender, EventArgs e)
+        {
         }
     }
 }

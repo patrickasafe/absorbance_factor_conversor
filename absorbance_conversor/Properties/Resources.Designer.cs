@@ -63,9 +63,9 @@ namespace absorbance_factor_conversor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap photo_2023_03_18_13_20_49 {
+        internal static System.Drawing.Bitmap xtec {
             get {
-                object obj = ResourceManager.GetObject("photo_2023-03-18_13-20-49", resourceCulture);
+                object obj = ResourceManager.GetObject("xtec", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

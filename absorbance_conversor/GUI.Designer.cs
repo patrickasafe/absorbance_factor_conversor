@@ -46,17 +46,18 @@
             // 
             // firstValueInput
             // 
-            this.firstValueInput.Location = new System.Drawing.Point(12, 126);
+            this.firstValueInput.Location = new System.Drawing.Point(12, 118);
             this.firstValueInput.Name = "firstValueInput";
             this.firstValueInput.Size = new System.Drawing.Size(202, 31);
             this.firstValueInput.TabIndex = 0;
             this.firstValueInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.firstValueInput.KeyPress += this.TextBox_KeyPress;
+
             // 
             // firstValueLabel
             // 
             this.firstValueLabel.AutoSize = true;
-            this.firstValueLabel.Location = new System.Drawing.Point(12, 98);
+            this.firstValueLabel.Location = new System.Drawing.Point(12, 90);
             this.firstValueLabel.Name = "firstValueLabel";
             this.firstValueLabel.Size = new System.Drawing.Size(125, 25);
             this.firstValueLabel.TabIndex = 1;
@@ -64,18 +65,17 @@
             // 
             // secondValueInput
             // 
-            this.secondValueInput.Location = new System.Drawing.Point(12, 212);
+            this.secondValueInput.Location = new System.Drawing.Point(12, 188);
             this.secondValueInput.Name = "secondValueInput";
             this.secondValueInput.Size = new System.Drawing.Size(202, 31);
             this.secondValueInput.TabIndex = 2;
             this.secondValueInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.secondValueInput.KeyPress += this.TextBox_KeyPress;
-
             // 
             // secondValueLabel
             // 
             this.secondValueLabel.AutoSize = true;
-            this.secondValueLabel.Location = new System.Drawing.Point(12, 184);
+            this.secondValueLabel.Location = new System.Drawing.Point(12, 160);
             this.secondValueLabel.Name = "secondValueLabel";
             this.secondValueLabel.Size = new System.Drawing.Size(152, 25);
             this.secondValueLabel.TabIndex = 3;
@@ -84,7 +84,7 @@
             // thirdValueLabel
             // 
             this.thirdValueLabel.AutoSize = true;
-            this.thirdValueLabel.Location = new System.Drawing.Point(12, 259);
+            this.thirdValueLabel.Location = new System.Drawing.Point(12, 230);
             this.thirdValueLabel.Name = "thirdValueLabel";
             this.thirdValueLabel.Size = new System.Drawing.Size(132, 25);
             this.thirdValueLabel.TabIndex = 4;
@@ -92,7 +92,7 @@
             // 
             // thirdValueInput
             // 
-            this.thirdValueInput.Location = new System.Drawing.Point(12, 287);
+            this.thirdValueInput.Location = new System.Drawing.Point(12, 258);
             this.thirdValueInput.Name = "thirdValueInput";
             this.thirdValueInput.Size = new System.Drawing.Size(202, 31);
             this.thirdValueInput.TabIndex = 5;
@@ -120,7 +120,7 @@
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(273, 287);
+            this.calculateButton.Location = new System.Drawing.Point(288, 256);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(112, 34);
             this.calculateButton.TabIndex = 8;
@@ -140,7 +140,7 @@
             // 
             // resultField
             // 
-            this.resultField.Location = new System.Drawing.Point(273, 249);
+            this.resultField.Location = new System.Drawing.Point(288, 216);
             this.resultField.Name = "resultField";
             this.resultField.ReadOnly = true;
             this.resultField.Size = new System.Drawing.Size(112, 31);
@@ -150,7 +150,7 @@
             // resultLabel
             // 
             this.resultLabel.AutoSize = true;
-            this.resultLabel.Location = new System.Drawing.Point(283, 221);
+            this.resultLabel.Location = new System.Drawing.Point(300, 188);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(90, 25);
             this.resultLabel.TabIndex = 11;
@@ -162,7 +162,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(412, 333);
+            this.ClientSize = new System.Drawing.Size(412, 308);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.resultField);
             this.Controls.Add(this.xtecLogoPicture);

@@ -21,7 +21,7 @@
             return labels;
         }
 
-        public float getResult(float firstValue, float secondValue, float thirdValue)
+        public float GetResult(float firstValue, float secondValue, float thirdValue)
         {
             var result = Calculate(firstValue, secondValue, thirdValue);
 

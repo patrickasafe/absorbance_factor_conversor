@@ -29,7 +29,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gui));
             this.firstValueInput = new System.Windows.Forms.TextBox();
             this.firstValueLabel = new System.Windows.Forms.Label();
             this.secondValueInput = new System.Windows.Forms.TextBox();
@@ -39,10 +38,10 @@
             this.modeSelector = new System.Windows.Forms.ComboBox();
             this.modeSelectorLabel = new System.Windows.Forms.Label();
             this.calculateButton = new System.Windows.Forms.Button();
-            this.xtechLogoPicture = new System.Windows.Forms.PictureBox();
+            this.xtecLogoPicture = new System.Windows.Forms.PictureBox();
             this.resultField = new System.Windows.Forms.TextBox();
             this.resultLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.xtechLogoPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtecLogoPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // firstValueInput
@@ -62,7 +61,6 @@
             this.firstValueLabel.Size = new System.Drawing.Size(125, 25);
             this.firstValueLabel.TabIndex = 1;
             this.firstValueLabel.Text = "firstValueLabel";
-
             // 
             // secondValueInput
             // 
@@ -101,7 +99,6 @@
             this.thirdValueInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.thirdValueInput.KeyPress += this.TextBox_KeyPress;
 
-
             // 
             // modeSelector
             // 
@@ -131,15 +128,15 @@
             this.calculateButton.UseVisualStyleBackColor = true;
             this.calculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
-            // xtechLogoPicture
+            // xtecLogoPicture
             // 
-            this.xtechLogoPicture.Image = ((System.Drawing.Image)(resources.GetObject("xtechLogoPicture.Image")));
-            this.xtechLogoPicture.Location = new System.Drawing.Point(250, 21);
-            this.xtechLogoPicture.Name = "xtechLogoPicture";
-            this.xtechLogoPicture.Size = new System.Drawing.Size(150, 102);
-            this.xtechLogoPicture.TabIndex = 9;
-            this.xtechLogoPicture.TabStop = false;
-            this.xtechLogoPicture.Click += new System.EventHandler(this.xtechLogoPicture_Click);
+            this.xtecLogoPicture.Image = global::absorbance_factor_conversor.Properties.Resources.xtec;
+            this.xtecLogoPicture.Location = new System.Drawing.Point(250, 21);
+            this.xtecLogoPicture.Name = "xtecLogoPicture";
+            this.xtecLogoPicture.Size = new System.Drawing.Size(150, 102);
+            this.xtecLogoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.xtecLogoPicture.TabIndex = 9;
+            this.xtecLogoPicture.TabStop = false;
             // 
             // resultField
             // 
@@ -168,7 +165,7 @@
             this.ClientSize = new System.Drawing.Size(412, 333);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.resultField);
-            this.Controls.Add(this.xtechLogoPicture);
+            this.Controls.Add(this.xtecLogoPicture);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.modeSelectorLabel);
             this.Controls.Add(this.modeSelector);
@@ -181,7 +178,7 @@
             this.Name = "Gui";
             this.Text = "Conversor de Abs e K";
             this.Load += new System.EventHandler(this.ModeSelectorLoad);
-            ((System.ComponentModel.ISupportInitialize)(this.xtechLogoPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtecLogoPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,7 +195,7 @@
         private ComboBox modeSelector;
         private Label modeSelectorLabel;
         private Button calculateButton;
-        private PictureBox xtechLogoPicture;
+        private PictureBox xtecLogoPicture;
         private TextBox resultField;
         private Label resultLabel;
     }

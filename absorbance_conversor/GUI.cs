@@ -25,7 +25,7 @@ namespace absorbance_factor_conversor
                 var secondValue = float.Parse(secondValueInput.Text);
                 var thirdValue = float.Parse(thirdValueInput.Text);
 
-                var result = Calculator.getResult(firstValue, secondValue, thirdValue);
+                var result = Calculator.GetResult(firstValue, secondValue, thirdValue);
 
                 resultField.Text = result.ToString(CultureInfo.InvariantCulture);
             }
@@ -66,15 +66,22 @@ namespace absorbance_factor_conversor
 
         private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Check if the pressed key is a digit
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            // Get the user's current culture
+            var culture = CultureInfo.CurrentCulture;
+
+            // Check if the pressed key is a digit or the decimal separator
+            if (!char.IsControl(e.KeyChar) &&
+                !(char.IsDigit(e.KeyChar) || e.KeyChar == culture.NumberFormat.NumberDecimalSeparator[0]))
             {
                 e.Handled = true;
             }
-        }
 
-        private void xtechLogoPicture_Click(object sender, EventArgs e)
-        {
+            // Allow only one decimal separator
+            if (e.KeyChar == culture.NumberFormat.NumberDecimalSeparator[0] &&
+                (sender as TextBox)!.Text.IndexOf(culture.NumberFormat.NumberDecimalSeparator[0]) > -1)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
